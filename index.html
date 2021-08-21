@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap-Challenge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .nav {
+            padding: 25px 0px;
+            margin-bottom: 50px;
+            /* border: 1px solid red; */
+        }
+        .nav .logo a {
+            text-decoration: none;
+            color: orangered;
+            font-size: 22px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 500;
+        }
+        .nav .logo-icon {
+            background-color: orangered;
+            width: 50px;
+            padding: 12px;
+            font-size: 22px;
+
+        }
+        .menu button {
+            height: 40px;
+            width: 150px;
+            background-color: rgb(230, 230, 251);
+            color:darkblue;
+            border: none;
+            font-weight: bold;
+        }
+        .menu button:hover{
+            background-color: rgba(255, 68, 0, 0.842);
+            box-shadow: 5px 10px 3px rgba(128, 128, 128, 0.39);  
+        }
+
+        .banner {
+            margin-bottom: 60px;
+        }
+        .banner-left{
+            /* border: 1px solid red; */
+        }
+        .banner-left h2 {
+            font-size: 45px;
+            color: darkblue;
+            line-height: 45px;
+        }
+        .banner-left p {
+            font-size: 14px;
+            color: rgba(0, 0, 139, 0.493);
+            line-height: 22px;
+            margin-bottom: 25px;
+        }
+        .banner-left span {
+            background-color: white;
+            margin-right: 2px;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 1px 2px 3px rgba(128, 128, 128, 0.301);
+            display: none;
+        }
+        .banner-left span i {
+            color:darkblue;
+        }
+        .banner-left .orange-btn{
+            background-color: rgba(255, 68, 0, 0.842);
+            height: 40px;
+            margin-right: 20px;
+            box-shadow: 5px 10px 3px rgba(128, 128, 128, 0.39);  
+        }
+        .banner-left .orange-btn:hover{
+           box-shadow: none;
+        }
+        .banner-left .release-btn{
+            background-color: rgb(230, 230, 251);
+            color:darkblue;
+            height: 40px;
+            border: none;
+            font-weight: 500;
+        }
+        .banner-left .release-btn:hover{
+            box-shadow: 5px 10px 3px rgba(128, 128, 128, 0.39); 
+            background-color: rgba(255, 68, 0, 0.842);
+            color: white; 
+        }
+
+        /* Banner Right Section start here---  */
+        .banner-right{
+            /* border: 1px solid red; */
+        }
+        .banner-right img {
+            border-radius: 25px;
+        }
+
+        .about {
+            margin-bottom: 100px;
+        }
+        .about img {
+            border-radius: 25px;
+        }
+         .about h2 {
+            font-size: 35px;
+            color: darkblue;
+            line-height: 38px;
+            text-transform: uppercase;
+        }
+        .about p {
+            font-size: 14px;
+            color: rgba(0, 0, 139, 0.493);
+            line-height: 22px;
+            margin-bottom: 25px;
+        }
+       
+        
+        .services{
+            margin-bottom: 50px;
+        }
+        .services h3 {
+            font-size: 20px;
+            color: darkblue;
+            line-height: 25px;
+            text-transform: uppercase;
+        }
+        .services p {
+            font-size: 14px;
+            color: rgba(0, 0, 139, 0.493);
+            line-height: 22px;
+            margin-bottom: 25px;
+        }
+        .services .box{
+            /* border-left: 0.5px solid rgba(255, 68, 0, 0.842); */
+            border-radius: 25px;
+            padding: 20px 20px;
+            box-shadow: 2px 4px 5px rgba(128, 128, 128, 0.774);
+        }
+        .services .box:hover{
+            box-shadow: none;
+            cursor: pointer;
+        }
+        .footer p{
+            border-top: 1px solid rgba(128, 128, 128, 0.301);
+            padding-top: 10px;
+        }
+        
+        img{
+            width: 100%;
+        }
+         .box span{
+            background-color: rgba(255, 68, 0, 0.842);
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        span i {
+            color: white;
+        }
+        .menu button {
+            float: right;
+        }
+
+
+        /* Media Query Start here---- */
+        @media only screen and (max-width:992px){
+            .banner-left span {
+                display: none;
+            }
+
+            .services .box{
+            /* border-left: 0.5px solid rgba(255, 68, 0, 0.842); */
+            border-radius: 25px;
+            padding: 20px 20px;
+            margin-right: 50px;
+            margin-bottom: 20px;
+            box-shadow: 2px 4px 5px rgba(128, 128, 128, 0.774);
+        }
+        .banner-right img {
+            margin-top: 10%;
+        }
+        .about{
+            margin-bottom: 50px;
+        }
+        .about img {
+            margin-top: 10%;
+        }
+
+        }
+
+        /* Media query for small device-- */
+        @media only screen and (max-width:475px){
+            .logo a {
+                display: none;
+            }
+            .logo-icon{
+                display: block;
+            }
+            .banner-left span {
+                display: none;
+            }
+            
+        }
+        @media only screen and (max-width:327px) {
+            .menu button {
+            height: 40px;
+            width: 115px;
+            background-color: rgb(230, 230, 251);
+            color:darkblue;
+            border: none;
+            font-weight: bold;
+        }
+        .banner-left span {
+            background-color: white;
+            margin-right: 2px;
+            padding: 5px 8px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .banner-left span i {
+            font-size: 10px;
+        }
+
+            .banner-left .orange-btn{
+                width: 100%;
+                box-shadow: none;
+            }
+            .banner-left h2 {
+            font-size: 35px;
+            color: darkblue;
+            line-height: 45px;
+           }
+            .banner-left .release-btn{
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+            <div class="row nav">
+                <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 logo"> <span class="logo-icon"><i class="fas fa-keyboard"></i></span> <a href="#"> Type-Master</a></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 menu "> <button class="btn btn-warning btn-sm">
+                    PRE-ORDER NOW
+                </button>
+                </div>
+            </div>
+            <!-- Banner section starts here--- -->
+            <div class="row banner">
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 banner-left"> 
+                    <H2>TYPEMASTER <br> KEYBOARD </H2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sequi reprehenderit consectetur, illum nostrum vero debitis obcaecati explicabo omnis quibusdam repellat .</p>
+                    <button class="btn btn-warning orange-btn">
+                        <span><i class="fas fa-shopping-cart"></i></span>
+                    PRE-ORDER NOW    
+                    </button>
+                    <button class="btn btn-info release-btn">
+                        <span><i class="fas fa-rocket"></i></span>
+                     LOUNCH ON 5/27 
+                    </button>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 banner-right">
+                    <img src="img/keybord.jfif" alt="">
+                </div>
+            </div>
+            <!-- banner section ends here--- -->
+            <!-- About section starts here---- -->
+            <div class="row about">
+                <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12 ">
+                    <img src="img/keybord-1.jfif" alt="">
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 ">
+                    <img src="img/keybord-3.jfif" alt="">
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 ">
+                    <h2>Mechnical <br> Wireless <br> Keybord</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel asperiores non voluptatem est. Magnam ex aut ab pariatur recusandae voluptas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel asperiores non voluptatem est. Magnam ex aut ab pariatur recusandae voluptas?</p>
+                </div>
+            </div>
+            <!-- About section ends here--- -->
+
+            <!-- Services section starte here--- -->
+            <div class="row services">
+                <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 box">
+                    <span > <i class="fas fa-drafting-compass"></i></span>
+                    <h3> HIGHLY <br> COMPATIBLE</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, eos explicabo! Rerum, tempora a explicabo ipsa dolor unde necessitatibus.</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 box">
+                    <span><i class="fab fa-bluetooth-b"></i></span>
+                    <h3> WIRELESS <br> WITH BLUETOOTH</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, eos explicabo! Rerum, tempora a explicabo ipsa dolor unde necessitatibus.</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 box">
+                    <span ><i class="fas fa-battery-three-quarters"></i></span>
+                    <h3> HIGH CAPACITY <br> BATTERY</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, eos explicabo! Rerum, tempora a explicabo ipsa dolor unde necessitatibus.</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 box">
+                    <span class><i class="far fa-lightbulb"></i></span>
+                    <h3> RGB BACKLIT <br> MODES</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, eos explicabo! Rerum, tempora a explicabo ipsa dolor unde necessitatibus.</p>
+                </div>
+            </div>
+            <!-- Services section ends here--- -->
+
+            <!-- footer section start here--- -->
+            <div class="row footer">
+                <div class="col-lg-12 .col-md-12 col-sm-12 col-xs-12 ">
+                    <p class="text-center">&copy; Design By <strong> Rangrej Rizwan</strong>  &hearts;</p>
+                </div>
+            </div>
+
+
+        
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
